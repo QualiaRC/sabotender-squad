@@ -12,7 +12,12 @@
 <body>
     <div id="title" fadeIn>
         <svg viewBox="0 0 100 43">
-            <image href="./resources/cact.svg" width="50" height="50" x="40" clip-path="inset(0 0 9 0)"></image>
+            <defs>
+                <clipPath id="crop-bottom">
+                    <rect x="40" y="0" width="50" height="37"></rect>
+                </clipPath>
+            </defs>
+            <image href="./resources/cact.svg" width="50" height="50" x="40" clip-path="url(#crop-bottom)"></image>
             <text x="1" y="35" class="outline">SABOTENDER</text>
             <text x="1" y="35" >SABOTENDER</text>
             <text text-anchor="end" x="100" y="35" class="outline">SQUAD</text>

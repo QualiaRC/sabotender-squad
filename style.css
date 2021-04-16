@@ -18,7 +18,9 @@
     background: #9E9;
     color: white;
 }
-
+img {
+    -webkit-user-drag: none;
+}
 ul {
     list-style: none;
     padding: 0;
@@ -28,12 +30,17 @@ li {
     margin-bottom: 0.2em;
     padding-left: 0.2em;
 }
+strong[highlight]{
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: .3em;
+    padding: 0 .3em;
+}
 .pointer {
     width: 1em;
     height: 1em;
     background-image: url('./resources/pointer.png');
     background-size: contain;
-    margin-right: 0.2em;
+    margin-right: 0.5em;
     display:inline-block;
     vertical-align: middle;
 }
@@ -53,6 +60,7 @@ body {
 }
 
 #title {
+    user-select: none;
     position: absolute;
     width: 50vw;
     font-family: 'ffFont';
@@ -140,12 +148,13 @@ p ~ ul {
 .section > * {
     border-left: 10px solid #9E9;
     padding: 10px 0px 10px 30px;
-    width: 70%;
+    width: 69%;
 }
 .section > div {
     flex-grow: 100;
 }
 .imageContainer > div {
+    position: relative;
     display:inline-block;
 }
 .imageContainer > div > img {
@@ -185,15 +194,24 @@ p ~ ul {
     cursor: pointer;
     user-select: none;
 }
-
-#imageModal > .modal-content {
+#imageModal > .wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
+}
+#imageModal .modal-content {
+    width: 100%;
     height: auto;
     user-select: none;
+}
+#imageModal .caption {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    margin-top: .2em;
 }
 
 .userList {
@@ -232,6 +250,21 @@ p ~ ul {
     background-repeat: no-repeat;
     display: inline-block;
     vertical-align: middle;
+}
+
+#footer {
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 0 40px #000000;
+    padding: .5em 1em;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+#footer > a {
+    color: #060;
+    text-decoration: none;
+}
+#footer > a:hover {
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 800px) {
@@ -278,8 +311,11 @@ p ~ ul {
         background-color: #ffffffaa;
         border-left: 5px solid #9E9;
     }
-    #imageModal > .modal-content {
+    #imageModal .wrapper {
         width: 90%;
+    }
+    #imageModal .caption {
+        font-size: 2.5em;
     }
     .imageContainer {
         text-align: center;
@@ -320,16 +356,17 @@ p ~ ul {
         width: 15em !important;
         height: 15em !important;
     }
+    #footer {
+        font-size: .8em;
+    }
 }
 
-
-/*
-.section[s2] {
-    background-image: url('./resources/wol.png');
+::-webkit-scrollbar {
+    width: 10px;
 }
-.section[s3] {
-    background-image: url('./resources/house.png');
+::-webkit-scrollbar-track {
+    background: transparent;
 }
-.section[s4] {
-    background-image: url('./resources/allag.png');
+::-webkit-scrollbar-thumb {
+    background: #00AA00AA;
 }

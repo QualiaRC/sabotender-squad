@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.imageContainer > div > img').forEach(function(element) {
         element.onclick = function() {
             document.querySelector("#imageModal").removeAttribute("noDisplay");
-            document.querySelector("#imageModal > .modal-content").src = element.src;
+            document.querySelector("#imageModal .modal-content").src = element.src;
+            document.querySelector("#imageModal .caption").textContent = element.getAttribute("caption") || "";
         }
     });
     document.onkeydown = function(event) {
@@ -21,4 +22,5 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     };
+    document.querySelector("#year").textContent = new Date().getFullYear();
 });

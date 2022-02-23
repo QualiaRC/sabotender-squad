@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300&display=swap');
+
+:root {
+    --color-bg: #313031;
+    --color-text: #F1F1F1;
+    --color-text-alt: #A7A7A7;
+    --color-gold: #947D5A;
+    --color-dark-gold: #7F693D;
+    --color-light-gold: #D6D7B9;
+    --color-button-highlight: #505050;
+    --color-button: #373737;
+}
+
+.dialog-inner {
+    background: var(--color-bg);
+    width: calc(100% - 4em);
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    position: relative;
+}
+
+.dialog-inner::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 1.5em 2em -2em white;
+    top: 0;
+    left: 0;
+    border-radius: 0.5em;
+}
+
+.dialog-outer {
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--color-text);
+    border: 0.1em solid var(--color-gold);
+    background: var(--color-dark-gold);
+    padding: 0.05em;
+    border-radius: 0.5em;
+    position: relative;
+    width: 100%;
+}
+
+.dialog-outer::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 -1px 1px var(--color-light-gold), 0 -1px 1px var(--color-light-gold);
+    top: 0;
+    left: 0;
+    border-radius: 0.5em;
+}
+
+.dialog-outer::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0.5em;
+    box-shadow: inset 0 0 0.2em 0.1em black;
+}
+
+.dialog-btn {
+    display: inline-block;
+    margin: auto;
+    width: fit-content;
+    padding: 0em 2.5em;
+    background: var(--color-button);
+    border-radius: 3em;
+    margin: 0.8em;
+    margin-bottom: 0;
+    box-shadow: inset 0 -4px 5px -4px var(--color-button-highlight), 0 0 4px black;
+    position: relative;
+    cursor: pointer;
+}
+
+.dialog-btn::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    background: var(--color-button-highlight);
+    box-shadow: inset 0 2px 3px -2px white;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+.dialog-btn>div {
+    position: relative;
+    z-index: 2;
+}
+
+.dialog-outerheader {
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    z-index: 3;
+    cursor: move;
+}
+
+.dialog-outer h1 {
+    font-family: 'BenchNine', sans-serif;
+    color: var(--color-text-alt);
+    margin: 0;
+    margin-bottom: 0.2rem;
+    font-size: 4em;
+}
+
+.dialog-outer p, .dialog-outer li {
+    margin: 0.2em;
+    font-size: 1.5em;
+}

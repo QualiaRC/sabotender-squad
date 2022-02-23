@@ -11,83 +11,102 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./xiv.css">
     <script src="./script.js"></script>
 </head>
 <body>
-    <div id="title" fadeIn>
-        <svg viewBox="0 0 100 43">
-            <defs>
-                <clipPath id="crop-bottom">
-                    <rect x="40" y="0" width="50" height="37"></rect>
-                </clipPath>
-            </defs>
-            <image href="./resources/cact.svg" width="50" height="50" x="40" clip-path="url(#crop-bottom)"></image>
-            <text x="1" y="35" class="outline">SABOTENDER</text>
-            <text x="1" y="35" >SABOTENDER</text>
-            <text text-anchor="end" x="100" y="35" class="outline">SQUAD</text>
-            <text text-anchor="end" x="100" y="35">SQUAD</text>
-            <rect width="99" height="1.5" x="0.75" y="36.25" fill="white"></rect>
-            <rect width="98.5" height="1" x="1" y="36.5"></rect>
-            <text text-anchor="end" x="99" y="41.5" class="outline" font-size="0.2em" font-weight="bold">サボテンダー分隊</text>
-            <text text-anchor="end" x="99" y="41.5" font-size="0.2em" font-weight="bold">サボテンダー分隊</text>
-          </svg>
-    </div>
+    <header>
+        <div id="title" >
+            <svg fadeIn viewBox="0 0 100 43">
+                <defs>
+                    <clipPath id="crop-bottom">
+                        <rect x="40" y="0" width="50" height="37"></rect>
+                    </clipPath>
+                </defs>
+                <image href="./resources/cact.svg" width="50" height="50" x="40" clip-path="url(#crop-bottom)"></image>
+                <text x="1" y="35" class="outline">SABOTENDER</text>
+                <text x="1" y="35" >SABOTENDER</text>
+                <text text-anchor="end" x="100" y="35" class="outline">SQUAD</text>
+                <text text-anchor="end" x="100" y="35">SQUAD</text>
+                <rect width="99" height="1.5" x="0.75" y="36.25" fill="white"></rect>
+                <rect width="98.5" height="1" x="1" y="36.5"></rect>
+                <text text-anchor="end" x="99" y="41.5" class="outline" font-size="0.2em" font-weight="bold">サボテンダー分隊</text>
+                <text text-anchor="end" x="99" y="41.5" font-size="0.2em" font-weight="bold">サボテンダー分隊</text>
+              </svg>
+        </div>
+    </header>
     <div id="arrow"><div><i></i></div></div>
     <div id="content">
-        <div class="section" s1>
-            <h1>About Us</h1>
-            <div>
-                <p>Sabotender Squad is a small, tight-knit community on the Behemoth server.</p>
-                <p>We're currently in the process of pulling in more active players in preparation of the upcoming <i>Endwalker</i> expansion.</p>
-            </div>
-            <div class="imageContainer">
-                <div><img src="resources/epicgamercrib.png"></div>
-                <div><img src="resources/epicgamercrib2.png"></div>
-                <div><img src="resources/epicgamercrib3.png"></div>
-            </div>
-        </div>
-        <div class="section white" s2>
-            <h1>Our Focus</h1>
-            <div>
-                <p>Our Free Company is looking to bring together FFXIV players both new and old to run a variety of content such as leveling dungeons, endgame raids, crafting, gathering and much more!</p>
-            </div>
-            <div class="imageContainer">
-                <div><img src="resources/treasure.png" caption="Treasure Hunts"></div>
-                <div><img src="resources/trials.png" caption="Trials and Raids"></div>
-                <div><img src="resources/bozja.png" caption="Bozja and Eureka"></div>
-            </div>
-        </div>
-        <div class="section" s3>
-            <h1>Perks</h1>
-            <div>
-                <ul>
-                    <li><div class="pointer"></div>Various <strong>Free Company buffs</strong>, including increased EXP earned and reduced teleportation fees.</li>
-                    <li><div class="pointer"></div>Large Free Company <strong>Mansion</strong>.</li>
-                    <li><div class="pointer"></div>Access to fully customizable <strong>private chambers</strong>.</li>
-                    <li><div class="pointer"></div>Access to in-house <strong>crafting facilities</strong>. (Increases max CP for level 70 and below)</li>
-                    <li><div class="pointer"></div>A group <strong>Discord server</strong> for socializing and planning events.</li>
-                    <li><div class="pointer"></div>Several <strong>veteran members</strong> willing to help players learn the ropes of FFXIV.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="section white" s4>
-            <h1>Contact Us</h1>
-            <div>
-                <p>For more information, feel free to reach out to any of us in game via <strong highlight>/tell</strong> or through a direct message on <strong>Discord</strong>.</p>
-                <div class="userList">
-                    <div>
-                        <img src="./resources/zenith.png">
-                        <div class="name">Zenith Wright</div>
-                        <div class="discord"><div></div>Horizons#6969</div>
-                    </div>
-                    <div>
-                        <img src="./resources/cynthia.png">
-                        <div class="name">Cynthia Ashmore</div>
-                        <div class="discord"><div></div>Oblivion7845#9136</div>
+        <div class="section">
+            <div class="dialog-outer" d1>
+                <div class="dialog-inner">
+                    <h1>About Us</h1>
+                    <p>
+                        Sabotender Squad is a small, tight-knit community on the Behemoth server.
+                    </p>    
+                    <div class="imageContainer">
+                        <div><img src="resources/epicgamercrib.png"></div>
+                        <div><img src="resources/epicgamercrib2.png"></div>
+                        <div><img src="resources/epicgamercrib3.png"></div>
                     </div>
                 </div>
             </div>
-            
+        </div>
+        <div class="section">
+            <div class="dialog-outer" d2>
+                <div class="dialog-inner">
+                    <h1>Our Focus</h1>
+                    <p>
+                        Our Free Company is looking to bring together FFXIV players both new and old to run a variety of content such as leveling dungeons, endgame raids, crafting, gathering and much more!
+                    </p>
+                    <div class="imageContainer">
+                        <div><img src="resources/treasure.png" caption="Treasure Hunts"></div>
+                        <div><img src="resources/trials.png" caption="Trials and Raids"></div>
+                        <div><img src="resources/bozja.png" caption="Bozja and Eureka"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="dialog-outer" d3>
+                <div class="dialog-inner">
+                    <h1>Perks</h1>
+                    <div>
+                        <ul>
+                            <li><div class="pointer"></div>Various <strong>Free Company buffs</strong>, including increased EXP earned and reduced teleportation fees.</li>
+                            <li><div class="pointer"></div>Large Free Company <strong>Mansion</strong>.</li>
+                            <li><div class="pointer"></div>Access to fully customizable <strong>private chambers</strong>.</li>
+                            <li><div class="pointer"></div>Access to in-house <strong>crafting facilities</strong>. (Increases max CP for level 70 and below)</li>
+                            <li><div class="pointer"></div>A group <strong>Discord server</strong> for socializing and planning events.</li>
+                            <li><div class="pointer"></div>Several <strong>veteran members</strong> willing to help players learn the ropes of FFXIV.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="dialog-outer" d4>
+                <div class="dialog-inner">
+                    <h1>Contact Us</h1>
+                    <p>
+                        For more information, feel free to reach out to any of us in game via <strong highlight>/tell</strong> 
+                        <br>
+                        or through a direct message on <strong>Discord</strong>.
+                    </p>
+                    <div class="userList">
+                        <div>
+                            <img src="./resources/zenith.png">
+                            <div class="name">Zenith Wright</div>
+                            <div class="discord"><div></div>Horizons#6969</div>
+                        </div>
+                        <div>
+                            <img src="./resources/cynthia.png">
+                            <div class="name">Cynthia Ashmore</div>
+                            <div class="discord"><div></div>Oblivion7845#9136</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
